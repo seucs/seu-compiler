@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/SEULex/SEULex.iml" filepath="$PROJECT_DIR$/SEULex/SEULex.iml" />
+      <module fileurl="file://$PROJECT_DIR$/SEUYacc/SEUYacc.iml" filepath="$PROJECT_DIR$/SEUYacc/SEUYacc.iml" />
+    </modules>
+  </component>
+</project>
