@@ -197,7 +197,7 @@ int main()
 }
 void init()
 {
-    //Õâ¸öº¯Êı¿ÉÒÔ²»Òª£¬ÔÚYaccÖĞ½«ÕâĞ©Êı×é³õÊ¼»¯ºÃ
+    //è¿™ä¸ªå‡½æ•°å¯ä»¥ä¸è¦ï¼Œåœ¨Yaccä¸­å°†è¿™äº›æ•°ç»„åˆå§‹åŒ–å¥½
     // get num table
     ifstream infile("NUMtable");
     string temp;
@@ -214,7 +214,7 @@ void init()
         symbol[i++]=temp.substr(0,temp.find(" "));
     }
 }
-//»ñµÃ·ûºÅËùÔÚµÄÁĞÊı
+//è·å¾—ç¬¦å·æ‰€åœ¨çš„åˆ—æ•°
 int getSymbolIndex(string sym)
 {
     int i=0;
@@ -233,7 +233,7 @@ int getNo(string token) //return token's id num
     }
     return -1;
 }
-//»ñµÃtokenĞòÁĞÖĞµÄ·ûºÅ
+//è·å¾—tokenåºåˆ—ä¸­çš„ç¬¦å·
 string getSymbol(string token) //return token's symbol
 {
     //found!=std::string::npos
@@ -246,7 +246,7 @@ string getSymbol(string token) //return token's symbol
         return token.substr(1,token.find(",")-1);
     }
 }
-//×´Ì¬Õ»³öÕ»²Ù×÷
+//çŠ¶æ€æ ˆå‡ºæ ˆæ“ä½œ
 int pop(stack<int> *ss)
 {
     if(ss->empty())
@@ -258,7 +258,7 @@ int pop(stack<int> *ss)
         return temp;
     }
 }
-//·ûºÅÕ»³öÕ»²Ù×÷
+//ç¬¦å·æ ˆå‡ºæ ˆæ“ä½œ
 string pop(stack<string> *ss)
 {
     if(ss->empty())
@@ -272,7 +272,7 @@ string pop(stack<string> *ss)
         return temp;
     }
 }
-//Êı×ÖÕ»³öÕ»²Ù×÷
+//æ•°å­—æ ˆå‡ºæ ˆæ“ä½œ
 string pop(stack<double> *ss)
 {
     double temp = ss->top();
@@ -283,7 +283,7 @@ string pop(stack<double> *ss)
     ss->pop();
     return t;
 }
-//ËÄÔªÊ½Éú³É
+//å››å…ƒå¼ç”Ÿæˆ
 void Gen(string oper,string arg,string arg2,int result)
 {
     Quan* q =  new Quan();
@@ -295,7 +295,7 @@ void Gen(string oper,string arg,string arg2,int result)
     AllQuan.push_back(q);
     NXQ++;
 }
-//ËÄÔªÊ½Éú³É
+//å››å…ƒå¼ç”Ÿæˆ
 void Gen(string oper,string arg,string arg2,string arg3)
 {
     Quan* q =  new Quan();
@@ -309,7 +309,7 @@ void Gen(string oper,string arg,string arg2,string arg3)
 
 void Backpatch(int tmp,int t)
 {
-    //tmp ´Ó 1 ¿ªÊ¼
+    //tmp ä» 1 å¼€å§‹
     int Q = tmp;
     while(Q!=0)
     {
