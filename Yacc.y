@@ -194,6 +194,8 @@ int main()
         }
     }
     cout<<"end"<<endl;
+    system("pause");
+    return 0;
 }
 void init()
 {
